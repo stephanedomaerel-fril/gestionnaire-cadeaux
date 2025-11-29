@@ -57,7 +57,7 @@ def lecture_cadeaux():
 #fonction pour sauvegarder la liste sous un fichier JSON
 def sauvegarde_liste():
     global liste_cadeaux
-    with open ("projet_1/listedecadeaux.json", "w", encoding="utf-8") as f:
+    with open ("listedecadeaux.json", "w", encoding="utf-8") as f:
         json.dump(liste_cadeaux, f, indent=4, ensure_ascii=False)
     print("La liste est sauvegardée.")
 
@@ -66,7 +66,7 @@ def sauvegarde_liste():
 def chargement_liste():
     global liste_cadeaux
     try:
-        with open("projet_1/listedecadeaux.json", "r") as f:
+        with open("listedecadeaux.json", "r", encoding="utf-8") as f:
             liste_cadeaux = json.load(f)
             print(liste_cadeaux)
         print("La liste à été chargé avec succès.")
